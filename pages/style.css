@@ -1,0 +1,67 @@
+/* ===== Themes (color variables) ===== */
+:root {
+  --bg: #EDF4F8;
+  --text: #4D4D4D;
+  --card: #FFFFFF;
+  --primary: #2ECC71;
+  --primary-hover: #27AE60;
+  --title: #4D8FAC;
+  --link: #2ECC71;
+}
+
+/* Theme B: warm / coffee */
+body.theme-warm {
+  --bg: #f6e6d1;      /* vanilla */
+  --text: #320010;    /* deep oak */
+  --card: #ffffff;
+  --primary: #724032; /* coffee */
+  --primary-hover: #490018; /* cabernet */
+  --title: #490018;
+  --link: #490018;
+}
+
+/* ===== Base styles using variables ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 40px;
+}
+
+h1 { color: var(--title); }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover { text-decoration: underline; }
+
+form {
+  background-color: var(--card);
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+label { display: block; margin-bottom: 10px; }
+
+input, select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover { background-color: var(--primary-hover); }

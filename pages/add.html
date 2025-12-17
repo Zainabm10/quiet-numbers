@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Transaction - Quiet Numbers</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <h1>Add Transaction</h1>
+
+  <a href="index.html">← Back to Home</a>
+  <form>
+  <p>
+    <label>
+      Amount:
+      <input type="number" name="amount" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Category:
+      <select name="category">
+        <option value="">Choose one</option>
+        <option value="food">Food</option>
+        <option value="transport">Transport</option>
+        <option value="rent">Rent</option>
+        <option value="fun">Fun</option>
+        <option value="other">Other</option>
+      </select>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Description:
+      <input type="text" name="description" />
+    </label>
+  </p>
+
+  <button type="submit">Save</button>
+</form>
+
+<script src="js/add.js"></script>
+<button id="toggleTheme" type="button">Change mood</button>
+
+</body>
+</html>

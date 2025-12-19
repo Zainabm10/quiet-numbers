@@ -1,4 +1,4 @@
-/* ===== Themes (color variables) ===== */
+/* nigth Mode ال */
 :root {
   --bg: #EDF4F8;
   --text: #4D4D4D;
@@ -9,18 +9,18 @@
   --link: #2ECC71;
 }
 
-/* Theme B: warm / coffee */
-body.theme-warm {
-  --bg: #f6e6d1;      /* vanilla */
-  --text: #320010;    /* deep oak */
-  --card: #ffffff;
-  --primary: #724032; /* coffee */
-  --primary-hover: #490018; /* cabernet */
-  --title: #490018;
-  --link: #490018;
+/* Dark Mode ال */
+body.theme-dark {
+  --bg: #1f2933;
+  --text: #d1d5db;
+  --card: #2b3642;
+  --primary: #34d399;
+  --primary-hover: #10b981;
+  --title: #e5e7eb;
+  --link: #34d399;
 }
 
-/* ===== Base styles using variables ===== */
+/*  شكل عام وترتيب الصفحة  */
 body {
   font-family: Arial, sans-serif;
   background-color: var(--bg);
@@ -28,6 +28,14 @@ body {
   margin: 40px;
 }
 
+/* المحتوى بالنص */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center; /* العناوين والروابط والأزرار بالنص */
+}
+
+/*  عناوين وروابط  */
 h1 { color: var(--title); }
 
 a {
@@ -38,15 +46,23 @@ a {
 
 a:hover { text-decoration: underline; }
 
+/*  الفورم بنص الصفحة  */
 form {
   background-color: var(--card);
   padding: 20px;
-  max-width: 400px;
+  max-width: 600px;
   border-radius: 8px;
-  margin-top: 20px;
+
+  margin: 20px auto 0 auto;
+
+  /* ال שדות المطلوبة عالشمال */
+  text-align: left;
 }
 
-label { display: block; margin-bottom: 10px; }
+label {
+  display: block;
+  margin-bottom: 10px;
+}
 
 input, select {
   width: 100%;
@@ -58,10 +74,25 @@ button {
   background-color: var(--primary);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 10px 14px;
   margin-top: 10px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 6px;
+}
+
+/* أنيميشن بسيط ( لما أضغط على change mode) */
+button, a {
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover, a:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 button:hover { background-color: var(--primary-hover); }
+
+@media (max-width: 600px) {
+  body { margin: 15px; }
+  form { max-width: 100%; }
+}

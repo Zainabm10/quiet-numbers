@@ -1,56 +1,66 @@
-// ===== Form validation (only if form exists) =====
+// فحص إذا الفورم موجود بالصفحة)
 const form = document.querySelector("form");
 
 if (form) {
   form.addEventListener("submit", function (event) {
+    // نمنع الإرسال ال אוטמטי للفورم
     event.preventDefault();
 
+    // نجيب القيم اللي دخلها المستخدم
     const amount = form.amount.value;
     const category = form.category.value;
     const description = form.description.value;
 
+    // فحص المبلغ 
     if (amount === "" || amount <= 0) {
-      alert("Please enter a valid amount");
+      alert("لازم تدخلي مبلغ صحيح");
       return;
     }
 
+    // فحص ال categoty
     if (category === "") {
-      alert("Please choose a category");
+      alert("اختاري تصنيف للحركة");
       return;
     }
 
+    // فحص الوصف
     if (description.trim().length < 2) {
-      alert("Please enter a short description");
+      alert("اكتبي وصف قصير على الأقل");
       return;
     }
 
-    alert("Transaction saved successfully!");
+    // إذا كلشي تمام
+    alert("تم حفظ الحركة بنجاح ✅");
     form.reset();
   });
 }
 
-// ===== Theme toggle (instant across tabs/pages) =====
+// تبديل الثيم  
 const THEME_KEY = "quietNumbersTheme";
 
 function applyTheme(themeValue) {
-  const warm = themeValue === "warm";
-  document.body.classList.toggle("theme-warm", warm);
+  const isDark = themeValue === "dark";
+  document.body.classList.toggle("theme-dark", isDark);
 }
 
-// Apply saved theme on page load
+// عند فتح الصفحة: نطبّق آخر ثيم المستخدم اختاره
 applyTheme(localStorage.getItem(THEME_KEY));
 
-// Toggle theme on button click
+// زر تغيير الثيم
 const toggleBtn = document.getElementById("toggleTheme");
 if (toggleBtn) {
   toggleBtn.addEventListener("click", function () {
-    const isWarm = !document.body.classList.contains("theme-warm");
-    localStorage.setItem(THEME_KEY, isWarm ? "warm" : "light");
-    applyTheme(isWarm ? "warm" : "light"); // update current page immediately
+    const isDark = !document.body.classList.contains("theme-dark");
+
+    // حفظ الاختيار بال browser
+    localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");
+
+    // نغيّر الثيم בהתאם بالصفحة الثانية
+    applyTheme(isDark ? "dark" : "light");
   });
 }
 
-// Listen for theme changes from OTHER tabs/windows and apply instantly
+// تزامن الثيم بين الصفحات المفتوحة 
 window.addEventListener("storage", function (event) {
   if (event.key === THEME_KEY) {
     applyTheme(event.newValue);

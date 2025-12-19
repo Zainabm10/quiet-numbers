@@ -1,19 +1,27 @@
 # Quiet Numbers
 
-Quiet Numbers is a simple client-side web application designed to help university students manage their personal budget in a calm and intuitive way.
+Quiet Numbers הוא פרויקט Web בצד הלקוח, שמטרתו לסייע בניהול הוצאות אישיות בצורה פשוטה וברורה.  
+הפרויקט מיועד לכל משתמש המעוניין בניהול תקציב בסיסי, עם מיקוד מיוחד בסטודנטים בתקופת הלימודים.
 
-## Features
-- Home page with quick navigation
-- Add Transaction page with form input
-- Client-side form validation with user alerts
-- Theme toggle (light / warm mode) with preference persistence using localStorage
-- Responsive design for mobile screens
-- Simple CSS animation on buttons and links
+## מטרת הפרויקט
+ניהול תקציב יומיומי עשוי להיות מאתגר, במיוחד בתקופות של עומס ולחץ.  
+הפרויקט פותח מתוך צורך בכלי נגיש ולא מורכב, שמאפשר להזין הוצאות בצורה מסודרת ולשמור על מודעות להתנהלות הכלכלית.
 
-## Technologies
-- HTML
-- CSS (Responsive Design + Animation)
-- JavaScript (Event Listeners, DOM manipulation, localStorage)
+מתוך ניסיון אישי במהלך שנות הלימודים האקדמיים, עלה הצורך במערכת פשוטה שתאפשר מעקב רציף אחרי הוצאות, במיוחד עבור מי שמתמודד עם קשיי ריכוז ועם עומס מתמשך.  
+בהיעדר כלי כזה, ההתנהלות הכלכלית עלולה להפוך לפחות מסודרת.
 
-## Notes
-This project implements the client-side requirements of Part B of the course project and was developed according to the provided specifications and approved accommodations.
+Quiet Numbers נועד לתת מענה לצורך הזה באמצעות ממשק רגוע, ברור ולא עמוס, שמאפשר מעקב יום-יומי בצורה נוחה.
+
+## הקלות
+הפרויקט פותח בהתאם להקלות בדרגה 3:
+
+## מימוש
+- שני עמודי HTML מקושרים
+- קובץ CSS חיצוני עם עיצוב אחיד, רספונסיבי ואנימציה בסיסית
+- קובץ JavaScript חיצוני הכולל:
+  - טיפול בקלטי משתמש (Forms)
+  - ולידציות והצגת התראות
+  - אפשרות מעבר בין מצב יום / לילה  
+    (נוספה מתוך סקרנות והתנסות אישית, מעבר לדרישות הבסיסיות)
+  - שמירת העדפת המשתמש באמצעות localStorage
+

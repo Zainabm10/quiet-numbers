@@ -1,4 +1,4 @@
-/* nigth Mode ال */
+/* ===== ثيمات (ألوان) ===== */
 :root {
   --bg: #EDF4F8;
   --text: #4D4D4D;
@@ -9,7 +9,7 @@
   --link: #2ECC71;
 }
 
-/* Dark Mode ال */
+/* ثيم الليل */
 body.theme-dark {
   --bg: #1f2933;
   --text: #d1d5db;
@@ -20,23 +20,18 @@ body.theme-dark {
   --link: #34d399;
 }
 
-/*  شكل عام وترتيب الصفحة  */
+/* ===== أساس الصفحة ===== */
+* { box-sizing: border-box; }
+
 body {
   font-family: Arial, sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  margin: 40px;
+  margin: 0;
+  padding: 40px 16px;
 }
 
-/* المحتوى بالنص */
-.container {
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center; /* العناوين والروابط والأزرار بالنص */
-}
-
-/*  عناوين وروابط  */
-h1 { color: var(--title); }
+h1 { color: var(--title); margin-top: 0; }
 
 a {
   color: var(--link);
@@ -46,30 +41,34 @@ a {
 
 a:hover { text-decoration: underline; }
 
-/*  الفورم بنص الصفحة  */
+/* ===== الحاوية (توسيط كل المحتوى) ===== */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ===== الفورم: الكرت بالنص، الحقول عالطرف ===== */
 form {
   background-color: var(--card);
   padding: 20px;
+  width: 100%;
   max-width: 600px;
-  border-radius: 8px;
-
-  margin: 20px auto 0 auto;
-
-  /* ال שדות المطلوبة عالشمال */
+  border-radius: 10px;
+  margin: 18px auto 0;
   text-align: left;
 }
 
-label {
-  display: block;
-  margin-bottom: 10px;
-}
+label { display: block; margin-bottom: 12px; }
 
 input, select {
   width: 100%;
-  padding: 6px;
-  margin-top: 4px;
+  padding: 8px;
+  margin-top: 6px;
 }
 
+/* ===== أزرار ===== */
 button {
   background-color: var(--primary);
   color: white;
@@ -77,10 +76,12 @@ button {
   padding: 10px 14px;
   margin-top: 10px;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
-/* أنيميشن بسيط ( لما أضغط على change mode) */
+button:hover { background-color: var(--primary-hover); }
+
+/* أنيميشن (مطلوب) */
 button, a {
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
@@ -90,9 +91,115 @@ button:hover, a:hover {
   opacity: 0.9;
 }
 
-button:hover { background-color: var(--primary-hover); }
+/* ===== Home UI ===== */
+.subtitle { margin-top: -6px; opacity: 0.9; }
 
-@media (max-width: 600px) {
-  body { margin: 15px; }
-  form { max-width: 100%; }
+.nav-links {
+  margin: 12px 0 18px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
+
+/* كروت الملخص */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 18px auto;
+  max-width: 900px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: left;
+}
+
+.card-title { font-size: 14px; opacity: 0.9; }
+.card-value { font-size: 22px; font-weight: bold; margin-top: 6px; }
+
+.section-title { margin-top: 18px; }
+
+/* ===== جدول العمليات ===== */
+.table-wrap {
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px auto 0;
+  max-width: 900px; /* مهم: نفس الكروت */
+}
+
+table { width: 100%; border-collapse: collapse; }
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+
+body.theme-dark th, body.theme-dark td {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+th { text-align: left; font-weight: bold; }
+.right { text-align: right; }
+
+/* ✅ محاذاة الجدول تحت نفس أعمدة الكروت */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* مهم */
+}
+
+/* 3 أعمدة بالتساوي + عمود Amount ثابت */
+th:nth-child(1), td:nth-child(1),
+th:nth-child(2), td:nth-child(2),
+th:nth-child(3), td:nth-child(3) {
+  width: calc((100% - 120px) / 3);
+}
+
+th:nth-child(4), td:nth-child(4) {
+  width: 120px;
+  text-align: right;
+}
+
+
+/* زر ثانوي */
+button.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(0,0,0,0.25);
+  margin-top: 14px;
+}
+
+body.theme-dark button.secondary {
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* رسالة */
+.message {
+  margin: 12px auto 0;
+  background: var(--card);
+  padding: 10px 12px;
+  border-radius: 8px;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  body { padding: 16px; }
+
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  th:nth-child(4), td:nth-child(4) {
+    width: 90px;
+  }
+}
+

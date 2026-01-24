@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiet Numbers</title>
+
+  <!-- IMPORTANT: absolute paths -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Quiet Numbers</h1>
+    <p class="subtitle">Track your income and expenses</p>
+
+    <div class="nav-links">
+      <button id="toggleTheme" class="secondary" type="button">Toggle Theme</button>
+
+      <div class="links-row">
+        <a href="/index.html">Home</a>
+        <a href="/add.html">Add</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-title">Income</div>
+        <div id="income" class="card-value">₪0.00</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Expense</div>
+        <div id="expense" class="card-value">₪0.00</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Balance</div>
+        <div id="balance" class="card-value">₪0.00</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Transactions</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Type</th>
+            <th>Date</th>
+            <th class="right">Amount</th>
+            <th class="right">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <div id="msg" class="message" style="display:none;"></div>
+  </div>
+
+  <!-- IMPORTANT: absolute path -->
+  <script type="module" src="/js/index.js"></script>
+</body>
+</html>

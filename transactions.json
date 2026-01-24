@@ -1,0 +1,58 @@
+[
+  {
+    "id": "8ceeecb5-bcc9-48a4-a17b-67f95ebefc0a",
+    "description": "כפר הסטודנטים",
+    "category": "Other",
+    "type": "expense",
+    "amount": 1550,
+    "date": "2026-01-24T20:20:56.304Z"
+  },
+  {
+    "id": "922876d8-eb08-4a2c-9891-705b00358b3d",
+    "description": "רכבת",
+    "category": "Other",
+    "type": "expense",
+    "amount": 52,
+    "date": "2026-01-24T20:14:16.801Z"
+  },
+  {
+    "id": "727c926e-d487-4b6f-88de-14b389cfbf4e",
+    "description": "רכבת",
+    "category": "Other",
+    "type": "expense",
+    "amount": 52,
+    "date": "2026-01-24T19:25:04.944Z"
+  },
+  {
+    "id": "34abe059-bdc8-4a4f-b6a6-e63b57eba97d",
+    "description": "רכבת",
+    "category": "Other",
+    "type": "expense",
+    "amount": 52,
+    "date": "2026-01-24T19:19:54.019Z"
+  },
+  {
+    "id": 1769292358913,
+    "description": "מתנה",
+    "category": "Other",
+    "type": "income",
+    "amount": 200,
+    "date": "2026-01-24T22:05:58.913Z"
+  },
+  {
+    "id": 1769292476214,
+    "description": "מתנה",
+    "category": "Other",
+    "type": "income",
+    "amount": 200,
+    "date": "2026-01-24"
+  },
+  {
+    "id": 1769293357364,
+    "description": "העברה מאבא",
+    "category": "Other",
+    "type": "income",
+    "amount": 700,
+    "date": "2026-01-24T22:22:37.364Z"
+  }
+]

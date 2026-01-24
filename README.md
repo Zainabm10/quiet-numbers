@@ -24,3 +24,55 @@ Quiet Numbers הוא פרויקט Web שמטרתו לסייע בניהול תק�
     (נוספה מתוך סקרנות והתנסות אישית, מעבר לדרישות הבסיסיות)
   - שמירת העדפת המשתמש באמצעות localStorage
 
+# Quiet Numbers – Web Project (Part C)
+
+## Description
+Quiet Numbers is a simple web application for managing income and expenses.
+The project includes a client side and a server side, built with Node.js and Express.
+
+## Technologies
+- Node.js
+- Express
+- SQLite (database)
+- HTML, CSS, JavaScript (Vanilla)
+
+## Project Structure
+- public/ – client side (HTML, CSS, JS)
+- server.js – Express server and routing
+- db.js – SQLite database connection and SQL queries
+- database.db – SQLite database file
+
+## Server Routes (Routing)
+- GET /api/test – test route
+- GET /api/transactions – fetch all transactions
+- POST /api/transactions – add a new transaction
+- DELETE /api/transactions/:id – delete transaction by id
+
+## Database
+The project uses SQLite as a local database.
+A table named `transactions` is created with the following fields:
+- id
+- description
+- category
+- type (income / expense)
+- amount
+- createdAt
+
+SQL queries are used for:
+- SELECT
+- INSERT
+- DELETE
+
+## Forms
+The Add Transaction form sends user input from the client side to the server,
+where the data is validated and stored in the database.
+
+## Validation & Edge Cases
+- Amount must be greater than 0
+- Type must be income or expense
+- Missing fields are rejected with an error response
+
+## How to Run
+1. Run `npm install`
+2. Run `npm start`
+3. Open http://localhost:3000 in the browser

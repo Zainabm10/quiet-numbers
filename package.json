@@ -1,0 +1,25 @@
+{
+  "name": "quiet-numbers",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.1",
+    "sqlite3": "^5.1.7"
+  },
+  "description": "Quiet Numbers הוא פרויקט Web שמטרתו לסייע בניהול תקציב בסיסי בצורה פשוטה וברורה, עם מיקוד מיוחד בסטודנטים בתקופת הלימודים.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zainabm10/quiet-numbers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zainabm10/quiet-numbers/issues"
+  },
+  "homepage": "https://github.com/Zainabm10/quiet-numbers#readme"
+}

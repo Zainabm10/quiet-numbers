@@ -1,0 +1,16 @@
+Project: Quiet Numbers – Part C
+
+✔ Server implemented with Node.js + Express
+✔ REST API routes: GET / POST / DELETE
+✔ Database: SQLite (database.db)
+✔ SQL queries: CREATE TABLE, SELECT, INSERT, DELETE
+✔ Client-side forms connected to server
+✔ Server-side validation and error handling
+✔ Project structure organized (public/, server.js, db.js)
+✔ GitHub repository updated with final commit
+✔ Application tested locally and working
+
+How to run:
+1. npm install
+2. npm start
+3. Open http://localhost:3000

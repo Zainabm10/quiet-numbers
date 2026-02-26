@@ -21,10 +21,17 @@ function money(n) {
 
 function formatDate(d) {
   if (!d) return "";
-  // لو كان ISO
+
+  // number timestamp or numeric string
+  if (typeof d === "number" || /^\d+$/.test(String(d))) {
+    const dtNum = new Date(Number(d));
+    if (!isNaN(dtNum.getTime())) return dtNum.toLocaleDateString();
+  }
+
+  // ISO / date string
   const dt = new Date(d);
   if (!isNaN(dt.getTime())) return dt.toLocaleDateString();
-  // لو كان YYYY-MM-DD
+
   return String(d);
 }
 
@@ -65,9 +72,10 @@ async function load() {
     tdType.textContent = type;
     tr.appendChild(tdType);
 
-    // Date
+    // Date (supports different field names)
     const tdDate = document.createElement("td");
-    tdDate.textContent = formatDate(tx.date);
+    const dateValue = tx.date || tx.created_at || tx.createdAt || tx.timestamp;
+    tdDate.textContent = formatDate(dateValue);
     tr.appendChild(tdDate);
 
     // Amount
@@ -114,4 +122,4 @@ async function load() {
 load().catch((e) => {
   console.error(e);
   showMessage("Error loading data", true);
-});
+})

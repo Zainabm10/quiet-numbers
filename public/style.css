@@ -10,7 +10,7 @@
 }
 
 /* Dark mode */
-body.theme-dark {
+body.dark {
   --bg: #1f2933;
   --text: #d1d5db;
   --card: #2b3642;
@@ -58,7 +58,7 @@ a:hover { text-decoration: underline; }
   opacity: 0.9;
 }
 
-/* ===== NAV (button فوق + links تحت) ===== */
+/* ===== NAV ===== */
 .nav-links {
   margin: 14px 0 22px;
   display: flex;
@@ -92,20 +92,8 @@ button.secondary {
   border: 1px solid rgba(0,0,0,0.25);
 }
 
-body.theme-dark button.secondary {
+body.dark button.secondary {
   border-color: rgba(255,255,255,0.25);
-}
-
-/* small danger button */
-.danger-btn{
-  background: transparent;
-  border: 1px solid rgba(255,0,0,0.35);
-  color: var(--text);
-  padding: 6px 10px;
-  border-radius: 8px;
-}
-.danger-btn:hover{
-  background: rgba(255,0,0,0.08);
 }
 
 /* animation */
@@ -154,7 +142,7 @@ th, td {
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
-body.theme-dark th, body.theme-dark td {
+body.dark th, body.dark td {
   border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
@@ -168,7 +156,7 @@ th:nth-child(3), td:nth-child(3) { width: 20%; }
 th:nth-child(4), td:nth-child(4) { width: 20%; }
 th:nth-child(5), td:nth-child(5) { width: 20%; }
 
-/* ===== FORM (Add page) ===== */
+/* ===== FORM ===== */
 form {
   background: var(--card);
   padding: 20px;
@@ -187,14 +175,6 @@ input, select {
   margin-top: 6px;
 }
 
-/* Save/Cancel centered */
-.form-actions {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 14px;
-}
-
 /* ===== ABOUT BOX ===== */
 .about-box {
   background: var(--card);
@@ -206,10 +186,6 @@ input, select {
   line-height: 1.6;
 }
 
-.about-box ul {
-  margin: 10px 0 0 18px;
-}
-
 /* ===== MESSAGE ===== */
 .message {
   margin: 12px auto 0;
@@ -218,27 +194,4 @@ input, select {
   border-radius: 8px;
   max-width: 600px;
   text-align: center;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 700px) {
-  .cards { grid-template-columns: 1fr; }
-  th:nth-child(5), td:nth-child(5) { width: 120px; }
-
-
-  /* Dark mode (basic) */
-body.dark {
-  background: #111;
-  color: #eee;
-}
-
-body.dark .container {
-  color: #eee;
-}
-
-body.dark .about-box {
-  background: #1b1b1b;
-  border-color: #2a2a2a;
-}
-
 }
